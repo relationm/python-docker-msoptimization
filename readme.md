@@ -19,13 +19,11 @@ Clone the repository:
    cd python-docker-msoptimization
 
 Build the optimized Docker image:
-	code
-	Bash
+	```bash
 	docker build -t my-python-app:slim .
 
 Run the container:
-	code
-	Bash
+	```bash
 	docker run -d -p 5000:5000 --name running-app my-python-app:slim
 
 Open your browser and go to: http://localhost:5000
