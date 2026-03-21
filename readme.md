@@ -14,20 +14,20 @@ By using multi-stage builds, the final image size was reduced by **almost 8 time
 ##  How to run locally
 
 Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/relationm/python-docker-msoptimization.git
    cd python-docker-msoptimization
-
+```
 Build the optimized Docker image:
-	```bash
+```bash
 	docker build -t my-python-app:slim .
-
+```
 Run the container:
-	```bash
+```bash
 	docker run -d -p 5000:5000 --name running-app my-python-app:slim
-
+```
 Open your browser and go to: http://localhost:5000
 
-📊 Optimization Results
-🛑 Fat Image (python:3.9): ~ 1.6 GB
-✅ Slim Image (Multi-stage + python:3.9-slim): ~ 201 MB
+## 📊 Optimization Results
+* 🛑 Fat Image (python:3.9): ~ 1.6 GB
+* ✅ Slim Image (Multi-stage + python:3.9-slim): ~ 201 MB
