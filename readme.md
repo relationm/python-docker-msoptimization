@@ -31,3 +31,12 @@ docker run -d -p 5000:5000 --name running-app my-python-app:slim
 * 🛑 Fat Image (python:3.9): ~ 1.6 GB
 * ✅ Slim Image (Multi-stage + python:3.9-slim): ~ 201 MB
 
+## 🤖 CI/CD Pipeline (Continuous Integration & Delivery)
+
+This project features a fully automated **CI/CD pipeline** built with **GitHub Actions**. Every push to the `main` branch triggers the following workflow:
+
+1. **Linting & Testing:** Code is checked for syntax errors using `Flake8` and unit-tested using `Pytest`.
+2. **Secure Authentication:** The workflow securely logs into Docker Hub using encrypted **GitHub Secrets** (preventing credential leaks).
+3. **Build & Push:** If tests pass, the optimized Docker image is automatically built and pushed to the public Docker Hub registry.
+
+*The pipeline ensures that only clean, tested, and optimized code makes it to the deployment stage.*
